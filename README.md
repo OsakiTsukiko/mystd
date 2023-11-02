@@ -10,10 +10,9 @@ make
 ```
 
 ### Table of Contents
-- [Vector: an idiomatic dynamic array implementation](#vector_anchor)
+- [Vector: an idiomatic dynamic array implementation](#vector)
   
-
-<!----> <a name="vector_anchor"></a>
+  
 ### Vector
 ```c
 vector* new_vector();
