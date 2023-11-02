@@ -1,10 +1,19 @@
 # MySTD
 ### Idiomatic C STD lib for UNI  
-  
+
+### How to Build!
+```bash
+mkdir build
+cd build
+cmake .. [-DLIBTYPE=static/shared]
+make
+```
+
 ### Table of Contents
-- Vector: an idiomatic dynamic array implementation
+- [Vector: an idiomatic dynamic array implementation](#vector_anchor)
   
 
+<!----> <a name="vector_anchor"></a>
 ### Vector
 ```c
 vector* new_vector();
