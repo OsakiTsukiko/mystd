@@ -22,6 +22,7 @@ int vector_size(vector* vec);
 void vector_push_front(vector* vec, int element);
 void vector_push_back(vector* vec, int element);
 int vector_pop_front(vector* vec);
+int vector_pop_back(vector* vec);
 
 int vector_remove(vector* vec, unsigned int index);
 
