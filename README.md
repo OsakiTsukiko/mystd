@@ -10,9 +10,21 @@ make
 ```
 
 ### Table of Contents
+- [How to Build???](#how-to-build)
 - [Vector: an idiomatic dynamic array implementation](#vector)
-  
-  
+
+### How to Build
+```bash
+git clone https://github.com/OsakiTsukiko/mystd
+cd mystd
+mkdir build
+cd build
+cmake ..
+make
+# header files can be found in source
+# for more info look into CMakeLists.txt
+```  
+
 ### Vector
 ```c
 vector* new_vector();
