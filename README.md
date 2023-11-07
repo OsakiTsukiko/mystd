@@ -51,9 +51,10 @@ void* vector_remove(vector* vec, unsigned int index);
 */
 ```
 
-### How to use
+#### How to use Vector
 ```cpp
-// yea, yea, ik, kinda ugly .. atleast for now
+// yea, yea, ik, kinda ugly .. at least for now
+// wrappers would be nice.. (open to pull requests 😅)
 vector* vec = new_vector();
 vector_push_back(vec, malloc(sizeof(int) * 1));
 *((int *)vec->array[0]) = 5;
