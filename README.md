@@ -25,35 +25,42 @@ int vector_size(vector* vec);
     Returns the size of the vector.
 */
 
-void vector_push_front(vector* vec, int element);
+void vector_push_front(vector* vec, void* element);
 /*
     Pushes a value to the front (start) of a vector.
 */
 
-void vector_push_back(vector* vec, int element);
+void vector_push_back(vector* vec, void* element);
 /*
     Pushes a value to the back (end) of a vector.
 */
 
-int vector_pop_front(vector* vec);
+void* vector_pop_front(vector* vec);
 /*
     Pops (removes) a value from the front (start) of the vector and returns it.
 */
 
-int vector_pop_back(vector* vec)
+void* vector_pop_back(vector* vec)
 /*
     Pops (removes) a value from the back (end) of the vector and returns it.
 */
 
-int vector_remove(vector* vec, unsigned int index);
+void* vector_remove(vector* vec, unsigned int index);
 /*
     Removes a value from the vector at a given index and returns it.
 */
-
-void vector_print(vector* vec, char* terminator);
-/*
-    Prints to the console the contents of the vector.(terminator should be null if not use, common use: \n)
-*/
 ```
 
-
+### How to use
+```cpp
+// yea, yea, ik, kinda ugly .. atleast for now
+vector* vec = new_vector();
+vector_push_back(vec, malloc(sizeof(int) * 1));
+*((int *)vec->array[0]) = 5;
+vector_push_back(vec, malloc(sizeof(int) * 1));
+*((int *)vec->array[1]) = 10;
+int* a = (int *)vector_pop_back(vec);
+printf("%d\n", *a);
+printf("%d %d\n", vector_size(vec), *((int *)vec->array[0]));
+free(a);
+```
