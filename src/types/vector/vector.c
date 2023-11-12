@@ -79,7 +79,7 @@ void* vector_remove(vector *vec, unsigned int index) {
     
     if (vec->len == 0) {
         free(vec->array);
-        return NULL;
+        return res;
     }
 
     void **new_arr = (void **)malloc(sizeof(void *) * vec->len);
@@ -91,4 +91,6 @@ void* vector_remove(vector *vec, unsigned int index) {
     }
     free(vec->array);
     vec->array = new_arr;
+
+    return res;
 }
